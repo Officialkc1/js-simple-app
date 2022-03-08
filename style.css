@@ -78,9 +78,9 @@ button:hover {
 }
 
 input.warning {
-    background-color: rgb(209, 134, 64);
+    background-color: rgb(248, 191, 145);
 }
 
 #remaining-chars.warning {
-    color: rgb(211, 125, 26);
+    color: rgb(211, 109, 26);
 }
