@@ -8,7 +8,7 @@ const maxAllowedChars = productNameInput.maxLength;
 
 const spanElement = document.getElementById('remaining-chars');
 // console.log(spanElement);
-spanElement.className = 'warning';
+// spanElement.className = 'warning';
 
 
 function updateRemainingChars(event) {
@@ -17,18 +17,26 @@ function updateRemainingChars(event) {
     const enteredTextLength = enteredText.length;
     // console.log(enteredTextLength);
 
-    if (enteredTextLength >= 50) {
-        productNameInput.className = 'warning'
-    } else {
-        productNameInput.classList.remove('warning')
-    }
-    
-
     const remainingChars = maxAllowedChars - enteredTextLength;
     // console.log(remainingChars);
-
+    
     remainingCharsElement.textContent = remainingChars;
     // console.log(remainingCharsElement.textContent);
+
+    // if (enteredTextLength >= 50) {
+    //     productNameInput.className = 'warning'
+    // } else {
+    //     productNameInput.classList.remove('warning')
+    // }
+    if (remainingChars <= 10) {
+        remainingCharsElement.classList.add('warning');
+        productNameInput.classList.add('warning');
+    } else {
+        remainingCharsElement.classList.remove('warning');
+        productNameInput.classList.remove('warning')
+
+    }
+    
 }
 
 productNameInput.addEventListener('input', updateRemainingChars);
