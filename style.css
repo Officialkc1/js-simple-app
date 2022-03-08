@@ -71,6 +71,7 @@ button {
 button:hover {
     background-color: rgb(128, 121, 23);
     border-color: rgb(209, 197, 23);
+    color: white;
 }
 
 #charcount {
